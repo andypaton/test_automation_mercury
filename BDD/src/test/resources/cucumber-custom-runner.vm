@@ -1,0 +1,37 @@
+#parse("/array.java.vm")
+package mercury.runners;
+
+
+import org.junit.ClassRule;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import mercury.steps.WebSuiteClassRule;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = {"$featureFile"},
+        strict=false,
+        glue = #stringArray($glue),
+#if(!$featureFile.contains(".feature:") && $tags)
+        tags = #stringArray($tags),
+#end
+        plugin = #stringArray($plugins),
+        dryRun = false,
+        monochrome = true
+        )
+@TestExecutionListeners(listeners = {DependencyInjectionTestExecutionListener.class})
+public class $className {
+
+    static {
+        RunnerHelper.setUpProperties();
+    }
+
+
+    @ClassRule
+    public static WebSuiteClassRule webSuiteClassRule = new WebSuiteClassRule();
+
+}

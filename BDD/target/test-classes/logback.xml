@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+  <!-- LOGBACK REQUIRED TO TURN OFF HttpClient LOGGING -->
+  
+  
+  
+  <!-- <include resource="base.xml" />  -->
+  <property name="root.level.console" value="ERROR" />
+</configuration>

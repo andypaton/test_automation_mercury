@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>test_automation_mercury</groupId>
+    <artifactId>BDD</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>BDD</name>
+    <url>http://maven.apache.org</url>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <selenium.base.version>3.13.0</selenium.base.version>
+        <cucumber.base.version>2.1.0</cucumber.base.version>
+        <info.cukes.version>1.2.5</info.cukes.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <springframework.version>4.3.12.RELEASE</springframework.version>
+        <springframeworkboot.version>1.5.8.RELEASE</springframeworkboot.version>
+        <sqlserver.version>6.2.2.jre8</sqlserver.version>
+        <itextpdf.version>7.0.2</itextpdf.version>
+        <skip.acceptance.test>false</skip.acceptance.test>
+        <show.screenshots>false</show.screenshots>
+        <cukes.forkCount>0</cukes.forkCount>
+        <cukes.reuseForks>true</cukes.reuseForks>
+        <env>test</env>
+        <skip.parallel>false</skip.parallel>
+        <skip.serial>false</skip.serial>
+        <set.SystemToggles>false</set.SystemToggles>
+        <impersonationMethod>api</impersonationMethod>
+    </properties>
+    
+    <profiles>
+        <profile>
+            <id>serial</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <webdriver>Chromeheadless</webdriver>
+                <webdriverconfig>webdriver.local.conf.json</webdriverconfig>
+                <skip.acceptance.test>true</skip.acceptance.test>
+                <serial.runners>**/RunCukeTest.java</serial.runners>
+                <environment>src/test/resources/${env}.properties</environment>
+                <skip.parallel>true</skip.parallel>
+            </properties>
+        </profile>
+    
+        <profile>
+            <id>mcp</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <webdriver>Chromeheadless</webdriver>
+                <webdriverconfig>webdriver.local.conf.json</webdriverconfig>
+                <skip.acceptance.test>true</skip.acceptance.test>
+                <parallel.runners>/mcp/parallel/Run_*_Test.java</parallel.runners>
+                <serial.runners>/mcp/serial/Run_*_Test.java</serial.runners>
+                <environment>src/test/resources/${env}.properties</environment>
+                <skip.parallel>false</skip.parallel>
+                <skip.serial>false</skip.serial>
+                <cukes.forkCount>4</cukes.forkCount>
+                <cukes.reuseForks>false</cukes.reuseForks>
+            </properties>
+        </profile>
+    
+        <profile>
+            <id>dryrun</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <webdriver>Chromeheadless</webdriver>
+                <webdriverconfig>webdriver.local.conf.json</webdriverconfig>
+                <skip.acceptance.test>true</skip.acceptance.test>
+                <parallel.runners>/dryrun/parallel/Run_*_Test.java</parallel.runners>
+                <serial.runners>/dryrun/serial/Run_*_Test.java</serial.runners>
+                <environment>src/test/resources/${env}.properties</environment>
+                <skip.parallel>false</skip.parallel>
+                <skip.serial>false</skip.serial>
+                <cukes.forkCount>4</cukes.forkCount>
+                <cukes.reuseForks>false</cukes.reuseForks>
+            </properties>
+        </profile>
+    
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <webdriver>Chromeheadless</webdriver>
+                <webdriverconfig>webdriver.local.conf.json</webdriverconfig>
+                <skip.acceptance.test>true</skip.acceptance.test>
+                <parallel.runners>/test/parallel/Run_*_Test.java</parallel.runners>
+                <serial.runners>/test/serial/Run_*_Test.java</serial.runners>
+                <environment>src/test/resources/${env}.properties</environment>
+                <skip.parallel>false</skip.parallel>
+                <skip.serial>false</skip.serial>
+                <cukes.forkCount>4</cukes.forkCount>
+                <cukes.reuseForks>false</cukes.reuseForks>
+            </properties>
+        </profile>
+
+    </profiles>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.18</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-junit47</artifactId>
+                            <version>2.18</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    
+        <plugins>
+
+            <!-- SUREFIRE : RUN UNIT TESTS -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/*Run*Test.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <skip>${skip.acceptance.test}</skip>
+                    <failIfNoTests>true</failIfNoTests>
+                    <!-- <forkMode>once</forkMode> -->
+                    <argLine>-XX:MaxMetaspaceSize=512m -Xms256M -Xmx1024m
+                        -XX:+UseConcMarkSweepGC -XX:+UseParNewGC
+                        -XX:+CMSParallelRemarkEnabled
+                        -XX:+CMSClassUnloadingEnabled</argLine>
+                    <systemPropertyVariables>
+                        <web.driver>${webdriver}</web.driver>
+                        <web.driver.config>${webdriverconfig}</web.driver.config>
+                        <screenshots>${show.screenshots}</screenshots>
+                        <fork.number>$${surefire.forkNumber}</fork.number>
+                        <target.env>${environment}</target.env>
+                        <setSystemToggles>${set.SystemToggles}</setSystemToggles>
+                        <impersonationMethod>${impersonationMethod}</impersonationMethod>
+                    </systemPropertyVariables>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
+                    </additionalClasspathElements>
+                </configuration>
+                
+                <executions>
+                    <execution>
+                        <configuration>
+                            <skip>${skip.parallel}</skip>
+                            <failIfNoTests>false</failIfNoTests>
+                            <includes>
+                                <include>${parallel.runners}</include>
+                            </includes>
+                            <forkCount>${cukes.forkCount}</forkCount>
+                            <reuseForks>${cukes.reuseForks}</reuseForks>
+                            <systemProperties>
+                                <systemProperty>
+                                    <key>web.driver</key>
+                                    <value>${web.driver}</value>
+                                </systemProperty>
+                                <systemProperty>
+                                    <key>web.driver.config</key>
+                                    <value>${webdriverconfig}</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                        <id>cucumber-parallel-acceptance-test</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+    
+                    <execution>
+                        <configuration>
+                            <skip>${skip.serial}</skip>
+                            <failIfNoTests>false</failIfNoTests>
+                            <includes>
+                                <include>${serial.runners}</include>
+                            </includes>
+                            <forkCount>0</forkCount>
+                            <reuseForks>false</reuseForks>
+                            <systemProperties>
+                                <systemProperty>
+                                    <key>web.driver</key>
+                                    <value>${web.driver}</value>
+                                </systemProperty>
+                                <systemProperty>
+                                    <key>web.driver.config</key>
+                                    <value>${webdriverconfig}</value>
+                                </systemProperty>
+                            </systemProperties>
+                        </configuration>
+                        <id>cucumber-serial-acceptance-test</id>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+        </plugins>
+    </build>
+    
+    <dependencies>
+            
+        <dependency> 
+            <groupId>com.opencsv</groupId> 
+            <artifactId>opencsv</artifactId> 
+            <version>4.1</version> 
+        </dependency> 
+    
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <!-- scope>test</scope> -->
+        </dependency>
+      
+        <!-- Log4J2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+      
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+      
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.4</version>
+        </dependency>
+      
+        <!-- https://mvnrepository.com/artifact/org.awaitility/awaitility -->
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>3.0.0</version>
+            <!-- <scope>test</scope> -->
+        </dependency>
+      
+        <!-- commons database connection pooling -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+      
+        <!-- add the JDBC Driver -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.2.2.jre8</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>adal4j</artifactId>
+            <version>1.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.gson</groupId>
+                    <artifactId>gson</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+      
+        <!-- For Driver Factory -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+      
+        <!-- for browserstack -->
+        <dependency>
+            <groupId>com.browserstack</groupId>
+            <artifactId>browserstack-local-java</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+      
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-edge-driver</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-ie-driver</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-htmlunit-driver</artifactId>
+            <version>2.52.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${selenium.base.version}</version>
+        </dependency>
+      
+        <!-- Cucumber dependancies : io.cucumber -->
+        <!-- <dependency> <groupId>io.cucumber</groupId> <artifactId>cucumber-java</artifactId> 
+            <version>${cucumber.base.version}</version> </dependency> <dependency> <groupId>io.cucumber</groupId> 
+            <artifactId>gherkin</artifactId> <version>4.1.3</version> </dependency> <dependency> 
+            <groupId>io.cucumber</groupId> <artifactId>cucumber-jvm</artifactId> <version>${cucumber.base.version}</version> 
+            <type>pom</type> </dependency> <dependency> <groupId>io.cucumber</groupId> 
+            <artifactId>cucumber-core</artifactId> <version>${cucumber.base.version}</version> 
+            </dependency> <dependency> <groupId>io.cucumber</groupId> <artifactId>cucumber-junit</artifactId> 
+            <version>${cucumber.base.version}</version> </dependency> <dependency> <groupId>io.cucumber</groupId> 
+            <artifactId>cucumber-spring</artifactId> <version>${cucumber.base.version}</version> 
+            </dependency> -->
+      
+        <!-- Cucumber dependancies : info.cukes -->
+        <!--
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${info.cukes.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${info.cukes.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>${info.cukes.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${info.cukes.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>${info.cukes.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.cobertura</groupId>
+            <artifactId>cobertura</artifactId>
+            <version>2.1.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun</groupId>
+                    <artifactId>tools</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+-->
+      
+        <!-- Cucumber dependancies : slaout/cucumber-jvm -->
+        <dependency>
+            <groupId>com.github.slaout.fork.info.cukesthreads</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.slaout.fork.info.cukesthreads</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.slaout.fork.info.cukesthreads</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.slaout.fork.info.cukesthreads</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+      
+        <!-- Springframework -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springframework.version}</version>
+            <!-- <scope>runtime</scope> -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+      
+        <!-- apache -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+      
+        <!-- faster XML -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.5</version>
+        </dependency>
+      
+        <!-- spring boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${springframeworkboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>${springframeworkboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+      
+        <!-- selenium-shutterbug -->
+        <dependency>
+            <groupId>com.assertthat</groupId>
+            <artifactId>selenium-shutterbug</artifactId>
+            <version>0.7</version>
+        </dependency>
+      
+        <!-- JSON -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20171018</version>
+        </dependency>
+      
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+      
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.9</version>
+        </dependency>
+      
+       <dependency>
+           <groupId>io.rest-assured</groupId>
+           <artifactId>rest-assured</artifactId>
+           <version>3.0.0</version>
+        </dependency>
+      
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+      
+        <!-- itextpdf -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>io</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>layout</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>forms</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>pdfa</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>sign</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>barcodes</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>font-asian</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>hyph</artifactId>
+            <version>${itextpdf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>applicationinsights-web</artifactId>
+            <!-- or applicationinsights-core for bare API -->
+            <version>[2.0,)</version>
+        </dependency>
+        <dependency>
+            <groupId>mercuryTestAutomation.ATUTestRecorder</groupId>
+            <artifactId>ATUTestRecorder</artifactId>
+            <scope>system</scope>
+            <version>2.1</version>
+            <systemPath>${project.basedir}\src\lib\ATUTestRecorder_2.1.jar</systemPath>
+        </dependency>
+      
+        <!-- generate random valid names etc -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>0.12</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <!-- 
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+         -->
+         
+         <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.18</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/fontbox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>fontbox</artifactId>
+			<version>2.0.18</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>azure-storage</artifactId>
+            <version>8.6.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}\src\lib\azure-storage-8.6.3.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+</project>

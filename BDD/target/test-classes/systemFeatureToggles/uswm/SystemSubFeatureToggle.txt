@@ -1,0 +1,40 @@
+HighRiskWorks   1
+TravelTime  1
+Overtime    1
+LeakTested  1
+AutoAssignContractors   1
+AssetDriven 0
+BudgetDriven    1
+LeakLocationQuestion    1
+LeakageCodeQuestion 1
+FaultPriorityDeferralsIncludeContractors    0
+QuoteDocOptionalForTechnicians  1
+QuoteDocOptionalForContractors  0
+Potential Landlord - First Look process 0
+Landlord    0
+Auto-convert Immediate Callout OOH  1
+Landlord Email Updates  1
+Show Job Deferral Questions 0
+US Regulations  1
+UK Regulations  0
+PpmJobs 1
+OnSiteSection   1
+AwaitingFeedbackSection 1
+ShowJobStatuses 1
+ShowJobPriorities   1
+DashboardSection    0
+ShowNonPriorityJobs 1
+LegalEntityAdmin    0
+MandatoryInvoiceGeneral 0
+InvoicingLineFulfilled  0
+LegalEntityAssignment and Validation    0
+ConsolidatedInvoicing   0
+SingleSignOn    0
+DisplayLinkedJobs   0
+DisplayAdditionalReturningInformation   0
+ShowPendingReviewJobs   0
+EnableReactiveToQuoteJobTypeChange  0
+Present PPM Remedial Job Question   0
+Present Request a Quote Question    0
+ShowFullJobHistoryTimeline  1
+Show Repair/Response SLA Target 0

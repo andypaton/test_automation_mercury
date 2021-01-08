@@ -1,0 +1,15 @@
+{
+  "siteId": 714,
+  "jobTypeId": 1,
+  "faultTypeId": 276,
+  "faultPriorityId": 2,
+  "timestamp": "AAAAAAAzyQs=",
+  "description": "Created for test automation",
+  "isDeferred": false,
+  "jobStatusId": 1,
+  "callerId": 5574,
+  "assetClassificationId": 3,
+  "locationId": 1014,
+  "specificResourceRequestId": 1764,
+  "id": 31605
+}

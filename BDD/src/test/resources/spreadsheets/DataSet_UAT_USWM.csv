@@ -1,0 +1,9 @@
+active,datasetId,userName,resourceId,siteId,faultPriorityId,faultTypeId,callerId,assetClassificationId,locationId
+y,portal_invoices_awaiting_approval_001,C2018,12932,223,4,515,31596,214,2
+y,portal_invoices_upload_001,C2018,12932,2,4,551,334702,213,2
+y,portal_jobs_start_work_001,C2233_tech,13054,1,1,4,84494,133,4
+y,portal_jobs_update_001,C2014_tech,13035,4,4,545,179849,220,5
+y,portal_jobs_fgas_005,C2590_tech,18271,1116,1,976,156041,214,13
+y,helpdesk_manage_resource_001,cyrus.cassaro,14623,225,1,784,249196,3251,22
+y,helpdesk_jobs_park_001,nicholas.cocoris,11524,195,4,555,34018,214,2
+y,helpdesk_search_001,nicholas.cocoris,11524,195,4,2152,31945,2,4

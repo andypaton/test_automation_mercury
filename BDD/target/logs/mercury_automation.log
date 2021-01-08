@@ -1,0 +1,187 @@
+2020-47-09 08:47:23.772 [INFO] [19308] apiPerformanceLog - PerfStats
+2020-47-09 08:47:26.377 [INFO] [19308] mercury.pageobject.web.LoginPage - Login Page isloaded
+2020-47-09 08:47:26.541 [INFO] [19308] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2020-47-09 08:47:26.562 [INFO] [19308] webPerformanceLog - PerfStats
+2020-47-09 08:47:26.637 [INFO] [19308] mercury.pageobject.web.LoginPage - Populating Form
+2020-47-09 08:47:26.637 [INFO] [19308] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2020-47-09 08:47:26.637 [INFO] [19308] mercury.pageobject.web.LoginPage - Password: City2019
+2020-47-09 08:47:29.802 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2020-47-09 08:47:29.818 [INFO] [19308] webPerformanceLog - PerfStats
+2020-47-09 08:47:29.848 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2020-47-09 08:47:29.860 [INFO] [19308] webPerformanceLog - PerfStats
+2020-47-09 08:47:29.899 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2020-47-09 08:47:29.919 [INFO] [19308] webPerformanceLog - PerfStats
+2020-48-09 08:48:32.138 [INFO] [19308] mercury.pageobject.web.LoginPage - Login Page isloaded
+2020-48-09 08:48:32.330 [INFO] [19308] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2020-48-09 08:48:32.347 [INFO] [19308] webPerformanceLog - PerfStats
+2020-48-09 08:48:32.539 [INFO] [19308] mercury.pageobject.web.LoginPage - Populating Form
+2020-48-09 08:48:32.540 [INFO] [19308] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2020-48-09 08:48:32.541 [INFO] [19308] mercury.pageobject.web.LoginPage - Password: City2019
+2020-48-09 08:48:35.448 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2020-48-09 08:48:35.468 [INFO] [19308] webPerformanceLog - PerfStats
+2020-48-09 08:48:35.508 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2020-48-09 08:48:35.519 [INFO] [19308] webPerformanceLog - PerfStats
+2020-48-09 08:48:35.545 [INFO] [19308] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2020-48-09 08:48:35.555 [INFO] [19308] webPerformanceLog - PerfStats
+2020-13-09 15:13:12.270 [INFO] [16028] apiPerformanceLog - PerfStats
+2020-13-09 15:13:13.485 [INFO] [16028] mercury.pageobject.web.LoginPage - Login Page isloaded
+2020-13-09 15:13:13.668 [INFO] [16028] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2020-13-09 15:13:13.683 [INFO] [16028] webPerformanceLog - PerfStats
+2020-13-09 15:13:13.751 [INFO] [16028] mercury.pageobject.web.LoginPage - Populating Form
+2020-13-09 15:13:13.752 [INFO] [16028] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2020-13-09 15:13:13.752 [INFO] [16028] mercury.pageobject.web.LoginPage - Password: City2019
+2020-13-09 15:13:16.640 [INFO] [16028] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2020-13-09 15:13:16.654 [INFO] [16028] webPerformanceLog - PerfStats
+2020-13-09 15:13:16.681 [INFO] [16028] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2020-13-09 15:13:16.697 [INFO] [16028] webPerformanceLog - PerfStats
+2020-13-09 15:13:16.741 [INFO] [16028] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2020-13-09 15:13:16.754 [INFO] [16028] webPerformanceLog - PerfStats
+2020-13-09 15:13:17.355 [INFO] [16028] apiPerformanceLog - PerfStats
+2020-14-09 15:14:18.893 [INFO] [15276] apiPerformanceLog - PerfStats
+2020-14-09 15:14:19.873 [INFO] [15276] mercury.pageobject.web.LoginPage - Login Page isloaded
+2020-14-09 15:14:20.051 [INFO] [15276] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2020-14-09 15:14:20.072 [INFO] [15276] webPerformanceLog - PerfStats
+2020-14-09 15:14:20.143 [INFO] [15276] mercury.pageobject.web.LoginPage - Populating Form
+2020-14-09 15:14:20.143 [INFO] [15276] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2020-14-09 15:14:20.143 [INFO] [15276] mercury.pageobject.web.LoginPage - Password: City2019
+2020-14-09 15:14:22.349 [INFO] [15276] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2020-14-09 15:14:22.364 [INFO] [15276] webPerformanceLog - PerfStats
+2020-14-09 15:14:22.396 [INFO] [15276] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2020-14-09 15:14:22.413 [INFO] [15276] webPerformanceLog - PerfStats
+2020-14-09 15:14:22.448 [INFO] [15276] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2020-14-09 15:14:22.464 [INFO] [15276] webPerformanceLog - PerfStats
+2020-14-09 15:14:49.002 [INFO] [15276] apiPerformanceLog - PerfStats
+2020-48-09 15:48:38.083 [INFO] [15072] apiPerformanceLog - PerfStats
+2020-48-09 15:48:39.179 [INFO] [15072] mercury.pageobject.web.LoginPage - Login Page isloaded
+2020-48-09 15:48:39.374 [INFO] [15072] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2020-48-09 15:48:39.399 [INFO] [15072] webPerformanceLog - PerfStats
+2020-48-09 15:48:39.477 [INFO] [15072] mercury.pageobject.web.LoginPage - Populating Form
+2020-48-09 15:48:39.477 [INFO] [15072] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2020-48-09 15:48:39.477 [INFO] [15072] mercury.pageobject.web.LoginPage - Password: City2019
+2020-48-09 15:48:43.518 [INFO] [15072] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2020-48-09 15:48:43.535 [INFO] [15072] webPerformanceLog - PerfStats
+2020-48-09 15:48:43.567 [INFO] [15072] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2020-48-09 15:48:43.580 [INFO] [15072] webPerformanceLog - PerfStats
+2020-48-09 15:48:43.613 [INFO] [15072] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2020-48-09 15:48:43.626 [INFO] [15072] webPerformanceLog - PerfStats
+2020-48-09 15:48:44.266 [INFO] [15072] apiPerformanceLog - PerfStats
+2020-49-09 15:49:01.059 [INFO] [15072] apiPerformanceLog - PerfStats
+2020-49-09 15:49:01.562 [INFO] [15072] apiPerformanceLog - PerfStats
+2020-49-09 15:49:15.793 [INFO] [15072] mercury.pageobject.web.helpdesk.jobs.HelpdeskJobPage - Page loaded
+2020-49-09 15:49:15.824 [INFO] [15072] webPerformanceLog - PerfStats
+2020-49-09 15:49:16.482 [INFO] [15072] mercury.pageobject.web.helpdesk.jobs.HelpdeskJobPage - Page loaded
+2020-49-09 15:49:16.501 [INFO] [15072] webPerformanceLog - PerfStats
+2020-49-09 15:49:23.118 [INFO] [15072] mercury.pageobject.web.helpdesk.resources.HelpdeskManageResourcesPanel - Page loaded
+2020-49-09 15:49:23.146 [INFO] [15072] webPerformanceLog - PerfStats
+2020-49-09 15:49:23.677 [INFO] [15072] mercury.pageobject.web.helpdesk.jobs.HelpdeskJobPage - Page loaded
+2020-49-09 15:49:23.691 [INFO] [15072] webPerformanceLog - PerfStats
+2020-49-09 15:49:28.555 [INFO] [15072] mercury.pageobject.web.helpdesk.jobs.HelpdeskFundingRequestsPanel - Page loaded
+2020-49-09 15:49:28.573 [INFO] [15072] webPerformanceLog - PerfStats
+2020-49-09 15:49:34.348 [INFO] [15072] mercury.pageobject.web.helpdesk.jobs.HelpdeskJobPage - Page loaded
+2020-49-09 15:49:34.362 [INFO] [15072] webPerformanceLog - PerfStats
+2020-00-11 14:00:33.145 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:36.609 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:38.308 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:39.646 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:40.793 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:43.723 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-00-11 14:00:44.240 [INFO] [12888] apiPerformanceLog - PerfStats
+2020-49-15 08:49:00.121 [INFO] [22388] apiPerformanceLog - PerfStats
+2020-49-15 08:49:09.378 [INFO] [22388] apiPerformanceLog - PerfStats
+2020-49-15 08:49:11.431 [INFO] [22388] apiPerformanceLog - PerfStats
+2020-04-15 09:04:37.388 [INFO] [13064] apiPerformanceLog - PerfStats
+2020-04-15 09:04:43.498 [INFO] [13064] apiPerformanceLog - PerfStats
+2020-04-15 09:04:44.112 [INFO] [13064] apiPerformanceLog - PerfStats
+2021-14-07 12:14:41.989 [INFO] [10992] apiPerformanceLog - PerfStats
+2021-14-07 12:14:43.739 [INFO] [10992] mercury.pageobject.web.LoginPage - Login Page isloaded
+2021-14-07 12:14:43.923 [INFO] [10992] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2021-14-07 12:14:43.940 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:44.071 [INFO] [10992] mercury.pageobject.web.LoginPage - Populating Form
+2021-14-07 12:14:44.071 [INFO] [10992] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2021-14-07 12:14:44.071 [INFO] [10992] mercury.pageobject.web.LoginPage - Password: City2019
+2021-14-07 12:14:47.897 [INFO] [10992] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-14-07 12:14:47.912 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:47.946 [INFO] [10992] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-14-07 12:14:47.962 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:47.992 [INFO] [10992] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2021-14-07 12:14:48.007 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:48.132 [INFO] [10992] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-14-07 12:14:48.155 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:48.191 [INFO] [10992] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-14-07 12:14:48.211 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:50.969 [INFO] [10992] mercury.pageobject.web.admin.AdminHomePage - Page loaded
+2021-14-07 12:14:50.982 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:56.289 [INFO] [10992] mercury.pageobject.web.admin.AdminResourcesAndUsersPage - Page loaded
+2021-14-07 12:14:56.329 [INFO] [10992] webPerformanceLog - PerfStats
+2021-14-07 12:14:56.442 [INFO] [10992] mercury.pageobject.web.admin.AdminMenuPage - Page loaded
+2021-14-07 12:14:56.457 [INFO] [10992] webPerformanceLog - PerfStats
+2021-15-07 12:15:18.115 [INFO] [10992] mercury.pageobject.web.admin.AdminAddNewResourcePage - Page loaded
+2021-15-07 12:15:18.127 [INFO] [10992] webPerformanceLog - PerfStats
+2021-15-07 12:15:31.889 [INFO] [10992] mercury.pageobject.web.admin.AdminEditSiteConfigurationModal - Page loaded
+2021-15-07 12:15:31.908 [INFO] [10992] webPerformanceLog - PerfStats
+2021-15-07 12:15:51.831 [INFO] [10992] mercury.pageobject.web.admin.AdminEditResourcePage - Page loaded
+2021-15-07 12:15:51.871 [INFO] [10992] webPerformanceLog - PerfStats
+2021-15-07 12:15:52.669 [INFO] [10992] mercury.pageobject.web.admin.AdminConfigureExceptionModal - Page loaded
+2021-15-07 12:15:52.685 [INFO] [10992] webPerformanceLog - PerfStats
+2021-18-07 12:18:44.079 [INFO] [23292] apiPerformanceLog - PerfStats
+2021-18-07 12:18:45.339 [INFO] [23292] mercury.pageobject.web.LoginPage - Login Page isloaded
+2021-18-07 12:18:45.513 [INFO] [23292] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2021-18-07 12:18:45.587 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:45.659 [INFO] [23292] mercury.pageobject.web.LoginPage - Populating Form
+2021-18-07 12:18:45.659 [INFO] [23292] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2021-18-07 12:18:45.659 [INFO] [23292] mercury.pageobject.web.LoginPage - Password: City2019
+2021-18-07 12:18:48.398 [INFO] [23292] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-18-07 12:18:48.418 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:48.454 [INFO] [23292] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-18-07 12:18:48.469 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:48.502 [INFO] [23292] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2021-18-07 12:18:48.517 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:49.957 [INFO] [23292] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-18-07 12:18:49.988 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:50.034 [INFO] [23292] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-18-07 12:18:50.057 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:51.760 [INFO] [23292] mercury.pageobject.web.admin.AdminHomePage - Page loaded
+2021-18-07 12:18:51.775 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:54.881 [INFO] [23292] mercury.pageobject.web.admin.AdminResourcesAndUsersPage - Page loaded
+2021-18-07 12:18:54.911 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:54.951 [INFO] [23292] mercury.pageobject.web.admin.AdminMenuPage - Page loaded
+2021-18-07 12:18:54.981 [INFO] [23292] webPerformanceLog - PerfStats
+2021-18-07 12:18:59.898 [INFO] [23292] mercury.pageobject.web.admin.AdminAddNewResourcePage - Page loaded
+2021-18-07 12:18:59.918 [INFO] [23292] webPerformanceLog - PerfStats
+2021-19-07 12:19:17.581 [INFO] [23292] mercury.pageobject.web.admin.AdminEditSiteConfigurationModal - Page loaded
+2021-19-07 12:19:17.604 [INFO] [23292] webPerformanceLog - PerfStats
+2021-40-07 12:40:17.708 [INFO] [23292] mercury.pageobject.web.admin.AdminEditResourcePage - Page loaded
+2021-40-07 12:40:17.728 [INFO] [23292] webPerformanceLog - PerfStats
+2021-40-07 12:40:18.669 [INFO] [23292] mercury.pageobject.web.admin.AdminConfigureExceptionModal - Page loaded
+2021-40-07 12:40:18.681 [INFO] [23292] webPerformanceLog - PerfStats
+2021-41-07 12:41:23.781 [INFO] [25888] apiPerformanceLog - PerfStats
+2021-41-07 12:41:24.960 [INFO] [25888] mercury.pageobject.web.LoginPage - Login Page isloaded
+2021-41-07 12:41:25.143 [INFO] [25888] mercury.pageobject.web.LoginPage - Login Page isLoaded success
+2021-41-07 12:41:25.169 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:25.275 [INFO] [25888] mercury.pageobject.web.LoginPage - Populating Form
+2021-41-07 12:41:25.275 [INFO] [25888] mercury.pageobject.web.LoginPage - Username: Andrew.Paton
+2021-41-07 12:41:25.275 [INFO] [25888] mercury.pageobject.web.LoginPage - Password: City2019
+2021-41-07 12:41:28.340 [INFO] [25888] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-41-07 12:41:28.370 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:28.430 [INFO] [25888] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-41-07 12:41:28.460 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:28.510 [INFO] [25888] mercury.pageobject.web.helpdesk.HelpdeskHomePage - Page loaded
+2021-41-07 12:41:28.550 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:28.703 [INFO] [25888] mercury.pageobject.web.helpdesk.HelpdeskNavBar - Page loaded
+2021-41-07 12:41:28.744 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:28.794 [INFO] [25888] mercury.pageobject.web.helpdesk.HelpdeskSearchBar - Page loaded
+2021-41-07 12:41:28.824 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:30.741 [INFO] [25888] mercury.pageobject.web.admin.AdminHomePage - Page loaded
+2021-41-07 12:41:30.760 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:34.015 [INFO] [25888] mercury.pageobject.web.admin.AdminResourcesAndUsersPage - Page loaded
+2021-41-07 12:41:34.045 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:34.095 [INFO] [25888] mercury.pageobject.web.admin.AdminMenuPage - Page loaded
+2021-41-07 12:41:34.125 [INFO] [25888] webPerformanceLog - PerfStats
+2021-41-07 12:41:39.134 [INFO] [25888] mercury.pageobject.web.admin.AdminAddNewResourcePage - Page loaded
+2021-41-07 12:41:39.184 [INFO] [25888] webPerformanceLog - PerfStats
+2021-46-07 12:46:03.035 [INFO] [25888] mercury.pageobject.web.admin.AdminEditSiteConfigurationModal - Page loaded
+2021-46-07 12:46:03.366 [INFO] [25888] webPerformanceLog - PerfStats
+2021-48-07 12:48:20.803 [INFO] [25888] mercury.pageobject.web.admin.AdminEditResourcePage - Page loaded
+2021-48-07 12:48:20.822 [INFO] [25888] webPerformanceLog - PerfStats
+2021-48-07 12:48:21.612 [INFO] [25888] mercury.pageobject.web.admin.AdminConfigureExceptionModal - Page loaded
+2021-48-07 12:48:21.624 [INFO] [25888] webPerformanceLog - PerfStats

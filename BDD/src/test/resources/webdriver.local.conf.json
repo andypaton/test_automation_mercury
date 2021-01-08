@@ -1,0 +1,55 @@
+{
+	"server": "hub-cloud.browserstack.com",
+	"user": "",
+	"key": "",
+	"password": "",
+	"capabilities": {
+		"browserstack.debug": true,
+		"browserstack.local": true
+	},
+	"environments": {
+		"PhantomJS": {
+			"capabilities": {
+				"trustAllSSLCertificates": true,
+				"acceptSslCerts": true,
+				"javascriptEnabled": true,
+				"locationContextEnabled": true,
+				"phantomjs.page.settings.userAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:16.0) Gecko/20121026 Firefox/48.0"
+			}
+		},
+		"Chrome": {
+			"capabilities": {
+				"trustAllSSLCertificates": true,
+				"acceptSslCerts": true,
+				"javascriptEnabled": true,
+				"locationContextEnabled": true
+			}
+            "resolution": "1920,1080"
+		},
+		"Chromeheadless": {
+			"capabilities": {
+				"trustAllSSLCertificates": true,
+				"acceptSslCerts": true,
+				"javascriptEnabled": true,
+				"locationContextEnabled": true
+			},
+			"resolution": "1920,1080"
+		},
+		"Firefox": {
+			"capabilities": {
+				"trustAllSSLCertificates": true,
+				"acceptSslCerts": true,
+				"javascriptEnabled": true,
+				"locationContextEnabled": true
+			}
+		},
+		"IE": {
+			"capabilities": {
+				"trustAllSSLCertificates": true,
+				"acceptSslCerts": true,
+				"javascriptEnabled": true,
+				"locationContextEnabled": true
+			}
+		}
+	}
+}

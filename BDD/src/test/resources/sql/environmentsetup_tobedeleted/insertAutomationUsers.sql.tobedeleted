@@ -1,0 +1,96 @@
+
+/*
+
+Run this script in the database in to be configured.
+
+This script will insert all automation team users and all IT users. Only run on an empty table.
+
+*/ 
+USE [%testdb]
+GO
+
+INSERT INTO %testdb.TestAutomation_Users 
+([UserName]
+           ,[Password]
+           ,[Type]
+           ,[LoggedOn]
+           ,[UpdatedOn]
+           ,[Active]
+           ,[DomainUser])
+VALUES
+(  N'andrew.paton', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 1, N'patona' ), 
+(  N'marcin.oleszczuk', N'AUqg{g\R5IKY', N'API', 0, NULL, 1, NULL ), 
+(  N'sonal.yede', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 1, N'yedes' ), 
+(  N'parnika.kilaru', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 1, N'kilarup' ), 
+(  N'jenkins.user1', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user2', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user3', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user4', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user5', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user6', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user7', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user8', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user9', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL ), 
+(  N'jenkins.user10', N'AUqg{g\R5IKY', N'Mercury', 0, NULL, 0, NULL )
+
+
+
+
+INSERT INTO %testdb.TestAutomation_Users
+([UserName]
+           ,[Password]
+           ,[Type]
+           ,[LoggedOn]
+           ,[UpdatedOn]
+           ,[Active]
+           ,[DomainUser])
+VALUES 
+( N'James.Crowhurst', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Steven.Gilmour', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Laurie.Gray', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'adam.smith', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Calum.Stankey', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Manju.Kiran', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Allan.McGregor', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'kay.leck', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'barry.carbis', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Shaun.Grierson', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Stephen.Meeke', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Darren.Lim', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Kevin.Hughes', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jason.Morton', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Phil.Cairney', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Kenny.Marshall', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Sarah.Myles', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Marcos.Gimeno', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Fernando.Santos', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Gary.Lim', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Nizza.Samuel', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Ryan.Mathieson', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'warren.myers', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Andy.Wilson', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Gary.Newell', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jason.Armstrong', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Andrew.Strang', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'jonathan.evans', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Malek.Saliman', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'jonathan.acourt', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jez.Abel', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'David.Ocallaghan', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jacob.Greenland', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Tony.Arrighi', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Vaishali.Bangera', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Stephen.Brown', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jason.McCann', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Sathia.Ramasamy', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Jan.Shair', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Lauren.Buchanan', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Blaine.Ross', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'ben.stewart', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Henry.Tsang', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Ross.Minnes', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Stuart.Clark', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Christopher.Felix', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'david.smith', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Elaine.McSporran', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL ), 
+( N'Stuart.Banks', 'AUqg{g\R5IKY', 'Mercury', 0, NULL, 1, NULL )

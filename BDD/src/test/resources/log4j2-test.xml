@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <Properties>
+        <Property name="webPerfLog.fileName">webPerformanceLog</Property>
+        <Property name="webPerfLog.file-header">pageTitle, pageURL, loadtime, domLoadTimeStamp</Property>
+        <Property name="apiPerfLog.fileName">apiPerformanceLog</Property>        
+        <Property name="apiPerfLog.file-header">method, URL, responseTime, domLoadTimeStamp</Property>
+    </Properties>
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%p] [%pid] %logger{36} - %msg%n" />
+		</Console>
+
+		<File name="MyFile" fileName="target/logs/mercury_automation.log">
+			<PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%p] [%pid] %logger{36} - %msg%n" />
+		</File>
+
+		<File name="webPerformanceLog" fileName="target/logs/${webPerfLog.fileName}.csv" >
+            <CsvParameterLayout delimiter="," header="${webPerfLog.file-header}\n"/>
+        </File>
+        
+        <File name="apiPerformanceLog" fileName="target/logs/${apiPerfLog.fileName}.csv" >
+            <CsvParameterLayout delimiter="," header="${apiPerfLog.file-header}\n"/>
+        </File>
+
+	</appenders>
+	<loggers>
+		<logger level="OFF" name="org.springframework" />
+		<logger level="OFF" name="org.springframework.boot" />
+		<logger level="OFF" name="org.jboss" />
+		<logger level="ERROR" name="org.hibernate" />
+		<logger level="OFF" name="org.seleniumhq.selenium" />
+		<logger level="OFF" name="org.seleniumhq" />
+		<logger level="debug" name="webPerformanceLog" >
+		    <appender-ref ref="webPerformanceLog" level="info" /> 
+		</logger>
+		<logger level="debug" name="apiPerformanceLog" >
+            <appender-ref ref="apiPerformanceLog" level="info" /> 
+        </logger>
+		<root level="debug" includeLocation="true">
+			<appender-ref ref="Console" level="debug" />
+			<appender-ref ref="MyFile" level="info" />
+		</root>
+
+ <!-- 
+<Console name="hibernate" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%-5level] %logger{36} - %msg%n" />
+		</Console>
+		<logger level="OFF" name="org.springframework" />
+		<logger level="OFF" name="org.springframework.boot" />
+		<logger level="OFF" name="org.jboss" />
+		<logger level="OFF" name="org.hibernate" />
+		<logger level="OFF" name="org.seleniumhq.selenium" />
+		<logger level="OFF" name="org.seleniumhq" />
+  -->
+
+		  </loggers>
+</configuration>
+		

@@ -1,0 +1,11 @@
+active,datasetId,userName,resourceId,siteId,faultPriorityId,faultTypeId,callerId,assetClassificationId,locationId
+y,portal_invoices_upload_001,C000808,19606,2,1,37,223463,189,2
+y,portal_jobs_fgas_005,C000010,19583,41,9,158,263663,456,45
+y,portal_jobs_fgas_007,C000010,19583,41,9,158,263663,456,45
+y,portal_jobs_fgas_008,C000010,19583,42,9,124,225032,483,169
+y,portal_jobs_fgas_018,C000275_tech,20347,490,10,124,224322,483,80
+y,portal_jobs_fgas_020,C000010_tech,19583,392,10,158,220972,456,85
+y,portal_jobs_fgas_021,C000010_tech,19583,392,10,158,220972,456,85
+y,helpdesk_jobs_cancel_001,McLeodC,null,84,3,113,223016,270,22
+y,admin_resources_001,McLeodC,null,84,3,98,221101,393,87
+y,helpdesk_funding_requests_auto_approve_001,GrimbleC,20230,613,18,37,261334,2,13

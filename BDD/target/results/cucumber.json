@@ -1,0 +1,244 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6185303737,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SetupTeardownSteps.setup(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 31798169,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HelpdeskSearchForLogJobSteps.setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Configure Exception Call Out Costs to Contractor - \"Standard\"",
+        "description": "",
+        "id": "admin---contractor-callout;configure-exception-call-out-costs-to-contractor---\"\u003ccallout-type\u003e\";;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2179684370,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SetupTeardownSteps.teardown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "login as username: Andrew.Paton, password: City2019",
+              "Scenario Starting:\nBrowser: chrome v:86.0.4240.193 XP\nDate   : Thu Jan 07 12:41:28 UTC 2021\nURL    : https://test-uswm.mercury.software/Helpdesk#!/home"
+            ],
+            "result": {
+              "duration": 4574647245,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a user with \"Mercury_Admin_Core\" role has logged in",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mercury_Admin_Core",
+                  "offset": 13
+                }
+              ],
+              "location": "LoginSteps.a_user_with_role_has_logged_in(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1946127281,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"Admin\" is selected from the Mercury navigation menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Admin",
+                  "offset": 1
+                }
+              ],
+              "location": "HelpdeskHomePageSteps.Admin_is_selected_from_the_Mercury_navigation_menu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3269304885,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the \"Resources \u0026 Users\" tile is selected",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Resources \u0026 Users",
+                  "offset": 5
+                }
+              ],
+              "location": "TileSteps.a_random_tile_is_selected(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2099843613,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user selects \"Resources\" from the sub menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Resources",
+                  "offset": 18
+                }
+              ],
+              "location": "AdminInvoiceLinesSteps.the_user_selects_from_the_sub_menu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Supplier Code: TEST:M!wX351414",
+              "Supplier Name: Gracie Abernathy",
+              "Resource Name: TestAuto1610023303340"
+            ],
+            "result": {
+              "duration": 318780542175,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "an Active Contractor Resource is created",
+            "match": {
+              "location": "AdminResourcesAndUsersSteps.active_contractor_resource_is_created()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85894935127,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the resource is edited",
+            "match": {
+              "location": "AdminResourcesAndUsersSteps.resource_is_edited()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2241209654,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "a \"Standard\" exception is added",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Standard",
+                  "offset": 3
+                }
+              ],
+              "location": "AdminResourcesAndUsersSteps.exception_is_added(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "Asserting that correct Site has been added",
+              "Asserting that the input box is displayed for the correct callout rate"
+            ],
+            "result": {
+              "duration": 692467251,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "a new rate is added for Site with \"Standard\" type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Standard",
+                  "offset": 35
+                }
+              ],
+              "location": "AdminResourcesAndUsersSteps.new_rate_is_added(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 5,
+            "name": "@andy"
+          },
+          {
+            "line": 1,
+            "name": "@admin"
+          },
+          {
+            "line": 1,
+            "name": "@admin_resources"
+          },
+          {
+            "line": 2,
+            "name": "@mcp"
+          },
+          {
+            "line": 1,
+            "name": "@admin_resources_contractor_callout"
+          }
+        ]
+      }
+    ],
+    "name": "Admin - Contractor Callout",
+    "description": "",
+    "id": "admin---contractor-callout",
+    "keyword": "Feature",
+    "uri": "features/web/admin/resources/admin_contractor_callout.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@admin"
+      },
+      {
+        "line": 1,
+        "name": "@admin_resources"
+      },
+      {
+        "line": 1,
+        "name": "@admin_resources_contractor_callout"
+      },
+      {
+        "line": 2,
+        "name": "@mcp"
+      }
+    ]
+  }
+]

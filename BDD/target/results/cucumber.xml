@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="427.895864">
+<testcase classname="Admin - Contractor Callout" name="Configure Exception Call Out Costs to Contractor - &quot;Standard&quot;" time="427.895864">
+<system-out><![CDATA[Given a user with "Mercury_Admin_Core" role has logged in...................passed
+And "Admin" is selected from the Mercury navigation menu....................passed
+And the "Resources & Users" tile is selected................................passed
+And the user selects "Resources" from the sub menu..........................passed
+When an Active Contractor Resource is created...............................passed
+And the resource is edited..................................................passed
+And a "Standard" exception is added.........................................passed
+Then a new rate is added for Site with "Standard" type......................passed
+]]></system-out>
+</testcase>
+</testsuite>

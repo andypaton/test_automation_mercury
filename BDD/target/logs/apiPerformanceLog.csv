@@ -1,0 +1,26 @@
+method, URL, responseTime, domLoadTimeStamp
+POST,https://dev-uswm.mercury.software/Account/Login,320,1607503643767
+POST,https://dev-uswm.mercury.software/Account/Login,327,1607526792265
+POST,https://dev-uswm.mercury.software/Account/Login/api/jobLogging/CreateDraftJob,139,1607526797355
+POST,https://dev-uswm.mercury.software/Account/Login,325,1607526858886
+POST,https://dev-uswm.mercury.software/Account/Login/api/jobLogging/CreateDraftJob,127,1607526889002
+POST,https://dev-uswm.mercury.software/Account/Login,331,1607528918076
+POST,https://dev-uswm.mercury.software/api/jobLogging/CreateDraftJob,204,1607528924266
+PATCH,https://dev-uswm.mercury.software/api/jobLogging/UpdateJob,5248,1607528941059
+PUT,https://dev-uswm.mercury.software/api/jobcontacts/putcontact,497,1607528941562
+POST,https://dev-uswm.mercury.software/Account/Login,364,1607695233087
+POST,https://dev-uswm.mercury.software/site/api/create,2049,1607695236608
+POST,https://dev-uswm.mercury.software/FieldManagement/api/OrganisationStructure/Save,932,1607695238308
+POST,https://dev-uswm.mercury.software/ConfigureResources/api/CreateOrUpdateResource,958,1607695239646
+POST,https://dev-uswm.mercury.software/ConfigureResources/api/CreateOrUpdateResource,878,1607695240792
+POST,https://dev-uswm.mercury.software/ConfigureResources/api/CreateOrUpdateResource,2310,1607695243723
+POST,https://dev-uswm.mercury.software/ConfigureResources/api/CreateOrUpdateResource,360,1607695244240
+POST,https://dev-uswm.mercury.software/Account/Login,835,1608022140017
+POST,https://dev-uswm.mercury.software/api/jobLogging/CreateDraftJob,197,1608022149377
+PATCH,https://dev-uswm.mercury.software/api/jobLogging/UpdateJob,2049,1608022151431
+POST,https://dev-uswm.mercury.software/Account/Login,315,1608023077384
+POST,https://dev-uswm.mercury.software/api/jobLogging/CreateDraftJob,196,1608023083497
+PATCH,https://dev-uswm.mercury.software/api/jobLogging/UpdateJob,603,1608023084112
+POST,https://test-uswm.mercury.software/Account/Login,3647,1610021681979
+POST,https://test-uswm.mercury.software/Account/Login,311,1610021924069
+POST,https://test-uswm.mercury.software/Account/Login,314,1610023283775

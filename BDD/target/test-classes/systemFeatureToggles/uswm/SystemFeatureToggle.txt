@@ -1,0 +1,26 @@
+ResourceQuoteQuestions  1
+AdditionalCloseDownQuestions    1
+AutoAssign  1
+QuoteJob    1
+RefrigerantGas  1
+Snow Management 0
+FaultPriorityDeferral   1
+SICJobs 0
+OBWTCP  0
+RecallResources 1
+NewRoutingRules 0
+PortalDailyActionsEmails    1
+AssetNotSelectedWarning 0
+FundingRequestAvailableForCityResource  0
+Landlord    1
+JobDeferrals    1
+AutoApproveContractorFundingRequests    0
+StorePortal 1
+Invoicing   0
+Compliance  0
+Create PPM Work Orders On Job Completion    0
+Power BI Integration    0
+AsbestosNotification    0
+BudgetReview    0
+StoreSignOffAtJobUpdate 0
+PPM Job Closedown   0
